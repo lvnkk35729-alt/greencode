@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>GreenCode Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header>
+    <div class="logo">
+      <span></span>
+      GreenCode
+    </div>
+
+    <div class="status">
+      ● ONLINE
+    </div>
+  </header>
+
+
+  <!-- HOME PAGE -->
+
+  <section id="home" class="page active">
+
+    <div class="hero">
+
+      <div class="small-title">
+        PREMIUM GENERATOR
+      </div>
+
+      <h1>
+        Generate
+        <span>Demo Codes</span>
+        Instantly
+      </h1>
+
+      <p>
+        Fast, clean and premium demo-code generator.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card" onclick="generateLicence()">
+
+        <div class="card-icon">
+          L
+        </div>
+
+        <h2>Licence Generator</h2>
+
+        <p>
+          Generate a random 10-character demo identifier.
+        </p>
+
+        <button>
+          GENERATE
+        </button>
+
+      </div>
+
+
+      <div class="card" onclick="generateFLC()">
+
+        <div class="card-icon">
+          F
+        </div>
+
+        <h2>FLC Licence</h2>
+
+        <p>
+          Generate a random 10-character demo identifier.
+        </p>
+
+        <button>
+          GENERATE
+        </button>
+
+      </div>
+
+
+      <div class="card" onclick="openLogin()">
+
+        <div class="card-icon">
+          D
+        </div>
+
+        <h2>DUB Generator</h2>
+
+        <p>
+          Login required to access the demo generator.
+        </p>
+
+        <button>
+          ACCESS
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div id="resultBox" class="result-box">
+
+      <div class="result-title">
+        GENERATED DEMO CODE
+      </div>
+
+      <div id="resultCode" class="result-code">
+        ----------
+      </div>
+
+      <div class="demo-warning">
+        DEMO ONLY • NOT A REAL LICENCE OR OFFICIAL IDENTIFIER
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- LOGIN PAGE -->
+
+  <section id="login" class="page">
+
+    <button class="back" onclick="showPage('home')">
+      ← BACK
+    </button>
+
+    <div class="login-box">
+
+      <div class="small-title">
+        DUB ACCESS
+      </div>
+
+      <h1>
+        <span>IP</span> Access
+      </h1>
+
+      <label>
+        USERNAME (0)
+      </label>
+
+      <input
+        id="username"
+        type="text"
+        placeholder="Enter username"
+      >
+
+      <button class="main-button" onclick="login()">
+        ENTER
+      </button>
+
+      <p class="note">
+        Demo access screen. No real IP information is collected.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- DUB PAGE -->
+
+  <section id="dub" class="page">
+
+    <button class="back" onclick="showPage('home')">
+      ← HOME
+    </button>
+
+    <div class="dub-box">
+
+      <div class="small-title">
+        DUB GENERATOR
+      </div>
+
+      <h1>
+        6 Digit
+        <span>Code</span>
+      </h1>
+
+      <div id="dubCode" class="dub-code">
+        • • • • • •
+      </div>
+
+      <div id="loader" class="loader"></div>
+
+      <button class="main-button" onclick="generateDUB()">
+        GENERATE
+      </button>
+
+      <p class="demo-warning">
+        DEMO CODE ONLY
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+    GreenCode • Premium Demo Generator
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
